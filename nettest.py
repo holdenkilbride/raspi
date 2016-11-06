@@ -5,12 +5,10 @@ import os
 
 
 GPIO.setmode(GPIO.BOARD)
-
 successLED = 7
 failLED = 11
 GPIO.setup(successLED,GPIO.OUT)
 GPIO.setup(failLED,GPIO.OUT)
-
 
 
 def nettest():
@@ -20,8 +18,6 @@ def nettest():
         GPIO.output(successLED,True)
         GPIO.output(failLED,False)
         print "Everything is good"
-        
-        
     else:
         GPIO.output(successLED,False)
         GPIO.output(failLED,True)
